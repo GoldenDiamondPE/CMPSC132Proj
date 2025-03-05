@@ -5,6 +5,7 @@ class address():
         self.__city = city
         self.__state = state
         self.__zipCode = zipCode
+        self.__type = type
 
     def setstreetNumber(self, streetNumber):
         self.__streetNumber = streetNumber
@@ -16,6 +17,8 @@ class address():
         self.__state = state
     def setZipCode(self, zipCode):
         self.__zipCode = zipCode
+    def setType(self, type):
+        self.__type = type
 
     def getstreetNumber(self):
         return self.__streetNumber
@@ -27,3 +30,5 @@ class address():
         return self.__state
     def getZipCode(self):
         return self.__zipCode
+    def getType(self):
+        return self.__type

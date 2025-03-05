@@ -1,0 +1,18 @@
+Part 1 Project Requirements:
+
+Construct a class called “Student” which meets the following criteria:
+
+1. It is capable of storing the following information:
+    a. Name of the student (first, middle, last)
+    b. Student Id number (DONE)
+    c. MailingAddress (DONE)
+        • Create a class which include street address, city, state, zip, type (permanent, local, etc.)
+    d. Email addresses (a list of emails, at least one element for each student)
+        • Create a class named as Email which include email address and type (personal email or academic or industrial emails)
+    e. Phone Number (a list of phone numbers, such as cell phone, home phone, or office phone, at least one phone number for each student)
+        • Create a class named as Phone_number, which includes phone number and type
+    f. Birth date (Use the Date class you created before, if do not have one, create one for it, including day, month, year attributes)
+    g. Acceptance date (use the Date class)
+    h. Start semester
+        • Create a class which includes Semester (fall, spring, summer) and year
+    i. Intended major (computer science, engineering, arts)
