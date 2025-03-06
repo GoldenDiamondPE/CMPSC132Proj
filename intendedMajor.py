@@ -7,3 +7,6 @@ class intendedMajor():
 
     def getIntendedMajor(self):
         return self.__intendedMajor
+
+    def __str__(self):
+        return self.__intendedMajor

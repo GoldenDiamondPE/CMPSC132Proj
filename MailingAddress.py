@@ -1,5 +1,5 @@
 class Address():
-    def __init__(self, streetNumber, street,  city, state,  zipCode):
+    def __init__(self, streetNumber, street,  city, state,  zipCode, type):
         self.__streetNumber = streetNumber
         self.__street = street
         self.__city = city
@@ -32,3 +32,6 @@ class Address():
         return self.__zipCode
     def getType(self):
         return self.__type
+
+    def __str__(self):
+        return (f"{self.__streetNumber} {self.__street}, {self.__city}, {self.__state}, {self.__zipCode}. {self.__type}")

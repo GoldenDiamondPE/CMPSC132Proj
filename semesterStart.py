@@ -1,2 +1,0 @@
-class semesterStart:
-    pass

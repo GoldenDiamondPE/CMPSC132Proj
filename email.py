@@ -12,3 +12,6 @@ class email():
         return self.__email
     def getType(self):
         return self.__type
+
+    def __str__(self):
+        return f"{self.__email} {self.__type}"

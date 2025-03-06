@@ -17,3 +17,6 @@ class nameOfStudent():
         return self.__middleName
     def getLastName(self):
         return self.__lastName
+
+    def __str__(self):
+        return (f"{self.__firstName} {self.__middleName} {self.__lastName}")

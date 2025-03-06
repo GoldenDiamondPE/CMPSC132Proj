@@ -14,8 +14,8 @@ from intendedMajor import intendedMajor
 
 class main():
     studentName1 = nameOfStudent("Brandon", "Alexander", "Bula")
-    studentID1 = studentID(1234567890)
-    studentAddress = Address("90", "Rabbit Run Road",  "Parkesburg", "PA",  "19365")
+    studentID1 = studentID("1234567890")
+    studentAddress = Address("90", "Rabbit Run Road",  "Parkesburg", "PA",  "19365", "Home")
     studentEmail = email("helloworld@gmail.com", "Personal")
     studentPhoneNumber = phoneNumber("484-123-0987", "Work")
     studentBirthDate = Date("04", "12", "2006")
