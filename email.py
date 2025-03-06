@@ -1,14 +1,14 @@
 class email():
     def __init__(self, email, type):
-        self.__number = email
+        self.__email = email
         self.__type = type
 
-    def setNumber(self, number):
-        self.__number = number
+    def setEmail(self, email):
+        self.__email = email
     def setType(self, type):
         self.__type = type
 
-    def getNumber(self):
-        return self.__number
+    def getEmail(self):
+        return self.__email
     def getType(self):
         return self.__type
