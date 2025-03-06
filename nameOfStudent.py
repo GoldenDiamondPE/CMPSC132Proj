@@ -1,19 +1,19 @@
 class nameOfStudent():
     def __init__(self, firstName, middleName, lastName):
-        self.firstName = firstName
-        self.middleName = middleName
-        self.lastName = lastName
+        self.__firstName = firstName
+        self.__middleName = middleName
+        self.__lastName = lastName
 
     def setFirstName(self, firstName):
-        self.firstName = firstName
+        self.__firstName = firstName
     def setMiddleName(self, middleName):
-        self.middleName = middleName
+        self.__middleName = middleName
     def setLastName(self, lastName):
-        self.lastName = lastName
+        self.__lastName = lastName
 
     def getFirstName(self):
-        return self.firstName
+        return self.__firstName
     def getMiddleName(self):
-        return self.middleName
+        return self.__middleName
     def getLastName(self):
-        return self.lastName
+        return self.__lastName

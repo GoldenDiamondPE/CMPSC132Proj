@@ -1,26 +1,26 @@
 class Date():
     def __init__(self, mm, dd, yyyy):
-        self.mm = mm
-        self.dd = dd
-        self.yyyy = yyyy
+        self.__mm = mm
+        self.__dd = dd
+        self.__yyyy = yyyy
 
     def set_mm(self, mm):
-        self.mm = mm
+        self.__mm = mm
 
     def set_dd(self, dd):
-        self.dd = dd
+        self.__dd = dd
 
     def set_yyyy(self, yyyy):
-        self.yyyy = yyyy
+        self.__yyyy = yyyy
 
     def get_mm(self):
-        return self.mm
+        return self.__mm
 
     def get_dd(self):
-        return self.dd
+        return self.__dd
 
     def get_yyyy(self):
-        return self.yyyy
+        return self.__yyyy
 
     def __str__(self):
-        return f"{self.mm}-{self.dd}-{self.yyyy}"
+        return f"{self.__mm}-{self.__dd}-{self.__yyyy}"

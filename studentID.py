@@ -1,12 +1,12 @@
 class studentID:
     def __init__(self, studentID):
-        self.studentID = studentID
+        self.__studentID = studentID
 
     def setStudentID(self, studentID):
-        self.studentID = studentID
+        self.__studentID = studentID
 
     def getStudentID(self):
-        return self.studentID
+        return self.__studentID
 
     def __str__(self):
-        return str(self.studentID)
+        return str(self.__studentID)
