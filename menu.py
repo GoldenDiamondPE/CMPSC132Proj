@@ -26,7 +26,7 @@ class menu():
             lastName = input("Last Name: ")
             studentName = nameOfStudent(firstName, middleName, lastName)
 
-            studentIDNum = input("Student ID: ")
+            studentIDNum = int(input("Student ID: "))
             studentIDNumber = studentID(studentIDNum)
 
             streetNumber = input("Street Number: ")
