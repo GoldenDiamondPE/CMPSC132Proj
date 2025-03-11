@@ -13,19 +13,34 @@ from Date import Date
 from intendedMajor import intendedMajor
 
 class main():
+    listOfStudents = []
+
     studentName1 = nameOfStudent("Brandon", "Alexander", "Bula")
     studentID1 = studentID(1234567890)
-    studentAddress = Address("91", "Rabbit Run Road",  "Parkesburg", "PA",  "19365", "Home")
-    studentEmail = email("helloworld@gmail.com", "Personal")
-    studentPhoneNumber = phoneNumber("484-123-0987", "Work")
-    studentBirthDate = Date("04", "12", "2006")
-    studentAcceptedDate = Date("06", "12", "2024")
-    studentSemesterStart = Date("08", "30", "2024")
-    studentIntendedMajor = intendedMajor("Computer Science")
+    studentAddress1 = Address("91", "Rabbit Run Road",  "Parkesburg", "PA",  "19365", "Home")
+    studentEmail1 = email("helloworld@gmail.com", "Personal")
+    studentPhoneNumber1 = phoneNumber("484-123-0987", "Work")
+    studentBirthDate1 = Date("04", "12", "2006")
+    studentAcceptedDate1 = Date("06", "12", "2024")
+    studentSemesterStart1 = Date("08", "30", "2024")
+    studentIntendedMajor1 = intendedMajor("Computer Science")
 
-    student1 = Student(studentName1, studentID1, studentAddress, studentEmail, studentPhoneNumber, studentBirthDate, studentAcceptedDate, studentSemesterStart, studentIntendedMajor)
+    studentName2 = nameOfStudent("John", "B", "Doe")
+    studentID2 = studentID(9876543210)
+    studentAddress2 = Address("123", "Baker Street", "Downingtown", "DE", "19335", "Apartment")
+    studentEmail2 = email("tester@hotmail.com", "Work")
+    studentPhoneNumber2 = phoneNumber("610-789-1234", "Personal")
+    studentBirthDate2 = Date("01", "02", "2000")
+    studentAcceptedDate2 = Date("06", "12", "2024")
+    studentSemesterStart2 = Date("08", "30", "2024")
+    studentIntendedMajor2 = intendedMajor("Computer Science")
 
-    print(student1)
+    student1 = Student(studentName1, studentID1, studentAddress1, studentEmail1, studentPhoneNumber1, studentBirthDate1, studentAcceptedDate1, studentSemesterStart1, studentIntendedMajor1)
+    student2 = Student(studentName2, studentID2, studentAddress2, studentEmail2, studentPhoneNumber2, studentBirthDate2, studentAcceptedDate2, studentSemesterStart2, studentIntendedMajor2)
+
+    listOfStudents.append(student1)
+    listOfStudents.append(student2)
+    print(listOfStudents[1])
 
 class TestStudent():
     main()

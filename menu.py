@@ -7,7 +7,6 @@ from phoneNumber import phoneNumber
 from Date import Date
 from intendedMajor import intendedMajor
 
-
 class menu():
     running = True
     listOfStudents = []
@@ -26,7 +25,7 @@ class menu():
             lastName = input("Last Name: ")
             studentName = nameOfStudent(firstName, middleName, lastName)
 
-            studentIDNum = int(input("Student ID: "))
+            studentIDNum = input("Student ID: ")
             studentIDNumber = studentID(studentIDNum)
 
             streetNumber = input("Street Number: ")
