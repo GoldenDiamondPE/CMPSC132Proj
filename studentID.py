@@ -1,4 +1,4 @@
-class studentID:
+class studentIDNum:
     def __init__(self, studentID):
         self.__studentID = studentID
 

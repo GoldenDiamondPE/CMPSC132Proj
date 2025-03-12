@@ -57,4 +57,4 @@ class Student():
                 f"Student Birthdate: {self.birthdate}\n"
                 f"Student Acceptance Date: {self.acceptanceDate}\n"
                 f"Student Semester Start Date: {self.semesterStart}\n"
-                f"Student Inteded Major: {self.intendedMajor}\n")
+                f"Student Intended Major: {self.intendedMajor}\n")

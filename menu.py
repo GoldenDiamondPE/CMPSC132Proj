@@ -1,6 +1,6 @@
 from Student import Student
 from nameOfStudent import nameOfStudent
-from studentID import studentID
+from studentID import studentIDNum
 from MailingAddress import Address
 from email import email
 from phoneNumber import phoneNumber
