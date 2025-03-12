@@ -40,7 +40,19 @@ class main():
 
     listOfStudents.append(student1)
     listOfStudents.append(student2)
-    print(listOfStudents[1])
+    for i in listOfStudents:
+        print(i.ID)
+        firstName = input("First Name: ")
+        middleName = input("Middle Name: ")
+        lastName = input("Last Name: ")
+        studentName = nameOfStudent(firstName, middleName, lastName)
+        i.name = studentName
+        print(i)
+
+    for i in listOfStudents:
+        if i.ID == studentID1:
+            pass
+
 
 class TestStudent():
     main()

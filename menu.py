@@ -25,8 +25,17 @@ class menu():
             lastName = input("Last Name: ")
             studentName = nameOfStudent(firstName, middleName, lastName)
 
-            studentIDNum = input("Student ID: ")
-            studentIDNumber = studentID(studentIDNum)
+            while True:
+                try:
+                    studentIDNum = int(input("Student ID: "))
+                    for w in listOfStudents:
+                        if w.ID == studentIDNum:
+                            raise ValueError("This Student ID is already taken.")
+                    else:
+                        studentIDNumber = studentID(studentIDNum)
+                    break
+                except ValueError:
+                    print("Invalid input. Please enter a valid integer.")
 
             streetNumber = input("Street Number: ")
             street = input("Street: ")
@@ -69,12 +78,90 @@ class menu():
             print(f"You Finished Creating {studentName}")
 
         if userInput == "2":
-            pass
-        # USE STUDENT ID TO SEE
+            print("Here is a list of students name and ID:")
+            for i in listOfStudents:
+                print(f"{i.name}\n{i.ID}")
+            studentIDSelected = int(input("Student ID You Would Like to Edit: "))
+
+            for edited in listOfStudents:
+                if edited.ID == studentIDSelected:
+                    userInputToChange = input("What would you like to change?\n"
+                                              "1.Name\n"
+                                              "2.ID\n"
+                                              "3. Address\n"
+                                              "4. Email\n"
+                                              "5. Phone Number\n"
+                                              "6. Birthdate\n"
+                                              "7. Acceptance Date\n"
+                                              "8. Semester Start\n"
+                                              "9. Intended Major\n")
+
+                    if userInputToChange == "1":
+                        firstName = input("First Name: ")
+                        middleName = input("Middle Name: ")
+                        lastName = input("Last Name: ")
+                        edited.name = nameOfStudent(firstName, middleName, lastName)
+
+                    elif userInputToChange == "2":
+                        while True:
+                            try:
+                                studentIDNum = int(input("Student ID: "))
+                                for w in listOfStudents:
+                                    if w.ID == studentIDNum:
+                                        raise ValueError("This Student ID is already taken.")
+                                else:
+                                    edited.ID=studentID(studentIDNum)
+                                break
+                            except ValueError:
+                                print("Invalid input. Please enter a valid integer.")
+
+                    elif userInputToChange == "3":
+                        streetNumber = input("Street Number: ")
+                        street = input("Street: ")
+                        city = input("City: ")
+                        state = input("State: ")
+                        zipCode = input("Zip Code: ")
+                        typeOfHouse = input("Type of House: ")
+                        edited.address = Address(streetNumber, city, state, zipCode, typeOfHouse)
+
+                    elif userInputToChange == "4":
+                        emailAddress = input("Email: ")
+                        emailType = input("Email Type: ")
+                        edited.email = email(emailAddress, emailType)
+
+                    elif userInputToChange == "5":
+                        number = input("Phone Number: ")
+                        numberType = input("Phone Type: ")
+                        edited.phone = phoneNumber(number, numberType)
+
+                    elif userInputToChange == "6":
+                        month = input("Month: ")
+                        day = input("Day: ")
+                        year = input("Year: ")
+                        edited.birthdate = Date(month, day, year)
+
+                    elif userInputToChange == "7":
+                        month = input("Month: ")
+                        day = input("Day: ")
+                        year = input("Year: ")
+                        edited.acceptanceDate = Date(month, day, year)
+
+                    elif userInputToChange == "8":
+                        month = input("Month: ")
+                        day = input("Day: ")
+                        year = input("Year: ")
+                        edited.semesterStart = Date(month, day, year)
+
+                    elif userInputToChange == "9":
+                        intendedMajorPicked = input("Intended Major: ")
+                        edited.intendedMajor = intendedMajor(intendedMajorPicked)
+
+                else:
+                    print("Student Not Found!")
 
         if userInput == "3":
             for i in listOfStudents:
-                print(f"{i}")
+                print(f"{i.name}\n{i.ID}")
 
             studentToDelete = input("Enter Student ID of Student to Delete: ")
 
