@@ -1,16 +1,14 @@
 from Student import Student
 from nameOfStudent import nameOfStudent
-from studentID import studentIDNum
+from studentIDNum import studentIDNum
 from MailingAddress import Address
 from email import email
 from phoneNumber import phoneNumber
 from Date import Date
 from intendedMajor import intendedMajor
 
-class menu():
+def menu(listOfStudents = []):
     running = True
-    listOfStudents = []
-
     while running:
         userInput = input("What would you like to do?\n"
                           "1. Create a Student\n"
@@ -27,17 +25,17 @@ class menu():
 
             while True:
                 try:
-                    studentIDNum = int(input("Student ID: "))
+                    studentID = input("\nStudent ID: ")
                     for w in listOfStudents:
-                        if w.ID == studentIDNum:
+                        if w.ID == studentID:
                             raise ValueError("This Student ID is already taken.")
                     else:
-                        studentIDNumber = studentID(studentIDNum)
+                        studentIDNumber = studentIDNum(studentID)
                     break
                 except ValueError:
                     print("Invalid input. Please enter a valid integer.")
 
-            streetNumber = input("Street Number: ")
+            streetNumber = input("\nStreet Number: ")
             street = input("Street: ")
             city = input("City: ")
             state = input("State: ")
@@ -45,30 +43,30 @@ class menu():
             typeOfHouse = input("Type of House: ")
             studentAddress = Address(streetNumber, street, city, state, zipCode, typeOfHouse)
 
-            emailAddress = input("Email: ")
+            emailAddress = input("\nEmail: ")
             emailType = input("Email Type: ")
             studentEmail = email(emailAddress, emailType)
 
-            number = input("Phone Number: ")
+            number = input("\nPhone Number: ")
             numberType = input("Phone Type: ")
             studentPhoneNumber = phoneNumber(number, numberType)
 
-            monthBorn = input("Month Born: ")
+            monthBorn = input("\nMonth Born: ")
             dayBorn = input("Day Born: ")
             yearBorn = input("Year Born: ")
             birthday = Date(monthBorn, dayBorn, yearBorn)
 
-            monthAccepted = input("Month Accepted: ")
+            monthAccepted = input("\nMonth Accepted: ")
             dayAccepted = input("Day Accepted: ")
             yearAccepted = input("Year Accepted: ")
             acceptanceDate = Date(monthAccepted, dayAccepted, yearAccepted)
 
-            monthSemesterStart = input("Month Semester Start: ")
+            monthSemesterStart = input("\nMonth Semester Start: ")
             daySemesterStart = input("Day Semester Start: ")
             yearSemesterStart = input("Year Semester Start: ")
             semesterStart = Date(monthSemesterStart, daySemesterStart, yearSemesterStart)
 
-            intendedMajorPicked = input("Intended Major: ")
+            intendedMajorPicked = input("\nIntended Major: ")
             StudentIntendedMajor = intendedMajor(intendedMajorPicked)
 
             studentInfo = Student(studentName, studentIDNumber, studentAddress, studentEmail, studentPhoneNumber, birthday, acceptanceDate, semesterStart, StudentIntendedMajor)
@@ -81,14 +79,14 @@ class menu():
         if userInput == "2":
             print("Here is a list of students name and ID:")
             for i in listOfStudents:
-                print(f"{i.name}\n{i.ID}")
-            studentIDSelected = int(input("Student ID You Would Like to Edit: "))
+                print(f"{i.name}\n{i.ID}\n")
+            studentIDSelected = input("Student ID You Would Like to Edit: ")
 
             for edited in listOfStudents:
-                if edited.ID == studentIDSelected:
+                if edited.ID.getStudentID() == studentIDSelected:
                     userInputToChange = input("What would you like to change?\n"
-                                              "1.Name\n"
-                                              "2.ID\n"
+                                              "1. Name\n"
+                                              "2. ID\n"
                                               "3. Address\n"
                                               "4. Email\n"
                                               "5. Phone Number\n"
@@ -106,15 +104,16 @@ class menu():
                     elif userInputToChange == "2":
                         while True:
                             try:
-                                studentIDNum = int(input("Student ID: "))
-                                for w in listOfStudents:
-                                    if w.ID == studentIDNum:
-                                        raise ValueError("This Student ID is already taken.")
+                                studentID = input("Student ID: ")
+                                for possibleStudent in listOfStudents:
+                                    if possibleStudent.ID.getStudentID() == studentID:
+                                        print("This Student ID is already taken.")
+                                        raise ValueError()
                                 else:
-                                    edited.ID=studentID(studentIDNum)
+                                    edited.ID=studentIDNum(studentID)
                                 break
                             except ValueError:
-                                print("Invalid input. Please enter a valid integer.")
+                                print("Invalid input. Please enter a valid ID.")
 
                     elif userInputToChange == "3":
                         streetNumber = input("Street Number: ")
@@ -157,31 +156,27 @@ class menu():
                         intendedMajorPicked = input("Intended Major: ")
                         edited.intendedMajor = intendedMajor(intendedMajorPicked)
 
-                else:
-                    print("Student Not Found!")
 
 
         if userInput == "3":
             for i in listOfStudents:
                 print(f"{i.name}\n{i.ID}\n")
-            studentToDelete = int(input("Enter Student ID of Student to Delete: "))
+            studentToDelete = input("Enter Student ID of Student to Delete: ")
 
             for student in listOfStudents:
-                if student.ID == studentToDelete:
-                    listOfStudents.remove(student)
+                if student.ID.getStudentID() == studentToDelete:
                     print(f"Student {student.name} (ID: {student.ID}) has been deleted.")
+                    listOfStudents.remove(student)
                     break
-            else:
-                print("Student not found!")
 
 
-        if userInput == ("4"):
+        if userInput == "4":
             for i in listOfStudents:
                 print(f"{i.name}\n{i.ID}\n")
-            studentToView = int(input("Enter Student ID of Student to View: "))
+            studentToView = input("Enter Student ID of Student to View: ")
 
             for student in listOfStudents:
-                if student.ID == studentToView:
+                if student.ID.getStudentID() == studentToView:
                     print(student)
                     break
             else:
