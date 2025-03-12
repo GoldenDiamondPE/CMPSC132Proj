@@ -77,6 +77,7 @@ class menu():
 
             print(f"You Finished Creating {studentName}")
 
+
         if userInput == "2":
             print("Here is a list of students name and ID:")
             for i in listOfStudents:
@@ -159,23 +160,36 @@ class menu():
                 else:
                     print("Student Not Found!")
 
+
         if userInput == "3":
             for i in listOfStudents:
-                print(f"{i.name}\n{i.ID}")
+                print(f"{i.name}\n{i.ID}\n")
+            studentToDelete = int(input("Enter Student ID of Student to Delete: "))
 
-            studentToDelete = input("Enter Student ID of Student to Delete: ")
-
-            for i in listOfStudents:
-                pass
-
+            for student in listOfStudents:
+                if student.ID == studentToDelete:
+                    listOfStudents.remove(student)
+                    print(f"Student {student.name} (ID: {student.ID}) has been deleted.")
+                    break
+            else:
+                print("Student not found!")
 
 
         if userInput == ("4"):
             for i in listOfStudents:
-                print(i)
+                print(f"{i.name}\n{i.ID}\n")
+            studentToView = int(input("Enter Student ID of Student to View: "))
+
+            for student in listOfStudents:
+                if student.ID == studentToView:
+                    print(student)
+                    break
+            else:
+                print("Student not found!")
 
 
         if userInput == "5":
+            print("You have selected to close the program!")
             running = False
 
     print("Thank you for using this program.")

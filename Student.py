@@ -8,7 +8,7 @@ class Student():
         self.birthdate = birthdate
         self.acceptanceDate = acceptanceDate
         self.semesterStart = semesterStart
-        self.intededMajor = intededMajor
+        self.intendedMajor = intededMajor
 
     def setName(self, name):
         self.name = name
@@ -27,7 +27,7 @@ class Student():
     def setSemesterStart(self, semesterStart):
         self.semesterStart = semesterStart
     def setIntededMajor(self, intededMajor):
-        self.intededMajor = intededMajor
+        self.intendedMajor = intededMajor
 
     def getName(self):
         return self.name
@@ -46,7 +46,7 @@ class Student():
     def getSemesterStart(self):
         return self.semesterStart
     def getIntededMajor(self):
-        return self.intededMajor
+        return self.intendedMajor
 
     def __str__(self):
         return (f"Student Name: {self.name}\n"
@@ -57,4 +57,4 @@ class Student():
                 f"Student Birthdate: {self.birthdate}\n"
                 f"Student Acceptance Date: {self.acceptanceDate}\n"
                 f"Student Semester Start Date: {self.semesterStart}\n"
-                f"Student Inteded Major: {self.intededMajor}\n")
+                f"Student Inteded Major: {self.intendedMajor}\n")

@@ -3,16 +3,44 @@ Part 1 Project Requirements:
 Construct a class called “Student” which meets the following criteria:
 
 1. It is capable of storing the following information:
-    a. Name of the student (first, middle, last)
+    a. Name of the student (first, middle, last) (DONE)
     b. Student Id number (DONE)
     c. MailingAddress (DONE)
         • Create a class which include street address, city, state, zip, type (permanent, local, etc.)
-    d. Email addresses (a list of emails, at least one element for each student)
+    d. Email addresses (a list of emails, at least one element for each student) (DONE)
         • Create a class named as Email which include email address and type (personal email or academic or industrial emails)
-    e. Phone Number (a list of phone numbers, such as cell phone, home phone, or office phone, at least one phone number for each student)
+    e. Phone Number (a list of phone numbers, such as cell phone, home phone, or office phone, at least one phone number for each student) (DONE)
         • Create a class named as Phone_number, which includes phone number and type
-    f. Birth date (Use the Date class you created before, if do not have one, create one for it, including day, month, year attributes)
-    g. Acceptance date (use the Date class)
-    h. Start semester
+    f. Birth date (Use the Date class you created before, if do not have one, create one for it, including day, month, year attributes) (DONE)
+    g. Acceptance date (use the Date class) (DONE)
+    h. Start semester (DONE)
         • Create a class which includes Semester (fall, spring, summer) and year
-    i. Intended major (computer science, engineering, arts)
+    i. Intended major (computer science, engineering, arts) (DONE)
+
+
+Note: All attributes are private. Aggregation/composition is expected to implemented.
+
+2. Functionality
+    a. Required a constructor
+    b. Functions to change the value of each of the data elements (setters/mutators), one element per function
+    c. Functions to return the value of each of the data elements (getters/accessors), one element per function
+    d. Display values of all the member elements
+
+3. Documentation:
+    Documentation is required. Use UML design to show your program’s structure. You are encouraged to use
+    advanced OOP methods to implement your application, such as composition and inheritance to improve the
+    flexibility and reusability of your program. For your reference, examples of UML design are attached:
+
+4. Testing
+    Develop a tester/driver module to test all classes developed in your project. Create a list of 5 students
+    (adding their basic information when objects are created). Develop a menu that would allow the user to
+    manipulate values, such as: (NOTE: menu options will invoke submenus as necessary)
+        a. Populate and add a student to the list via keyboard.
+        b. Edit an existed student via keyboard.
+        c. Delete a student from the list via keyboard.
+        d. Display a requested student in the list via keyboard.
+        e. Exit the application
+
+5. Upload
+    Upload your documentation file, source code, and testing data (can copy and save into a separate .txt
+    file) to Canvas before the deadline.

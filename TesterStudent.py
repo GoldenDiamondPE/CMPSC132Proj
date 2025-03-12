@@ -11,47 +11,81 @@ from email import email
 from phoneNumber import phoneNumber
 from Date import Date
 from intendedMajor import intendedMajor
+from menu import menu
 
 class main():
     listOfStudents = []
 
-    studentName1 = nameOfStudent("Brandon", "Alexander", "Bula")
-    studentID1 = studentID(1234567890)
-    studentAddress1 = Address("91", "Rabbit Run Road",  "Parkesburg", "PA",  "19365", "Home")
-    studentEmail1 = email("helloworld@gmail.com", "Personal")
-    studentPhoneNumber1 = phoneNumber("484-123-0987", "Work")
-    studentBirthDate1 = Date("04", "12", "2006")
-    studentAcceptedDate1 = Date("06", "12", "2024")
-    studentSemesterStart1 = Date("08", "30", "2024")
-    studentIntendedMajor1 = intendedMajor("Computer Science")
+    studentName = nameOfStudent("Brandon", "Alexander", "Bula")
+    studentID = studentID(1234567890)
+    studentAddress = Address("91", "Rabbit Run Road",  "Parkesburg", "PA",  "19365", "Home")
+    studentEmail = email("helloworld@gmail.com", "Personal")
+    studentPhoneNumber = phoneNumber("484-123-0987", "Work")
+    studentBirthDate = Date("04", "12", "2006")
+    studentAcceptedDate = Date("06", "12", "2024")
+    studentSemesterStart = Date("08", "30", "2024")
+    studentIntendedMajor = intendedMajor("Computer Science")
 
-    studentName2 = nameOfStudent("John", "B", "Doe")
-    studentID2 = studentID(9876543210)
-    studentAddress2 = Address("123", "Baker Street", "Downingtown", "DE", "19335", "Apartment")
-    studentEmail2 = email("tester@hotmail.com", "Work")
-    studentPhoneNumber2 = phoneNumber("610-789-1234", "Personal")
-    studentBirthDate2 = Date("01", "02", "2000")
-    studentAcceptedDate2 = Date("06", "12", "2024")
-    studentSemesterStart2 = Date("08", "30", "2024")
-    studentIntendedMajor2 = intendedMajor("Computer Science")
+    student = Student(studentName, studentID, studentAddress, studentEmail, studentPhoneNumber, studentBirthDate, studentAcceptedDate, studentSemesterStart, studentIntendedMajor)
+    listOfStudents.append(student)
 
-    student1 = Student(studentName1, studentID1, studentAddress1, studentEmail1, studentPhoneNumber1, studentBirthDate1, studentAcceptedDate1, studentSemesterStart1, studentIntendedMajor1)
-    student2 = Student(studentName2, studentID2, studentAddress2, studentEmail2, studentPhoneNumber2, studentBirthDate2, studentAcceptedDate2, studentSemesterStart2, studentIntendedMajor2)
+    studentName = nameOfStudent("John", "B", "Doe")
+    studentID = studentID(9876543210)
+    studentAddress = Address("123", "Baker Street", "Downingtown", "DE", "19335", "Apartment")
+    studentEmail = email("tester@hotmail.com", "Work")
+    studentPhoneNumber = phoneNumber("610-789-1234", "Personal")
+    studentBirthDate = Date("01", "02", "2000")
+    studentAcceptedDate = Date("06", "12", "2024")
+    studentSemesterStart = Date("08", "30", "2024")
+    studentIntendedMajor = intendedMajor("Computer Science")
 
-    listOfStudents.append(student1)
-    listOfStudents.append(student2)
+    student = Student(studentName, studentID, studentAddress, studentEmail, studentPhoneNumber, studentBirthDate, studentAcceptedDate, studentSemesterStart, studentIntendedMajor)
+    listOfStudents.append(student)
+
+    studentName = nameOfStudent("Mac", "C", "Conor")
+    studentID = studentID(9876543210)
+    studentAddress = Address("986", "Summer Lane", "Fore", "CA", "18753", "House")
+    studentEmail = email("tester@yahoo.com", "Work")
+    studentPhoneNumber = phoneNumber("123-456-7891", "Personal")
+    studentBirthDate = Date("01", "02", "2000")
+    studentAcceptedDate = Date("06", "12", "2024")
+    studentSemesterStart = Date("08", "30", "2024")
+    studentIntendedMajor = intendedMajor("Biology")
+
+    student = Student(studentName, studentID, studentAddress, studentEmail, studentPhoneNumber, studentBirthDate, studentAcceptedDate, studentSemesterStart, studentIntendedMajor)
+    listOfStudents.append(student)
+
+    studentName = nameOfStudent("John", "B", "Doe")
+    studentID = studentID(9876543210)
+    studentAddress = Address("123", "Baker Street", "Downingtown", "DE", "19335", "Apartment")
+    studentEmail = email("tester@hotmail.com", "Work")
+    studentPhoneNumber = phoneNumber("610-789-1234", "Personal")
+    studentBirthDate = Date("01", "02", "2000")
+    studentAcceptedDate = Date("06", "12", "2024")
+    studentSemesterStart = Date("08", "30", "2024")
+    studentIntendedMajor = intendedMajor("Computer Science")
+
+    student = Student(studentName, studentID, studentAddress, studentEmail, studentPhoneNumber, studentBirthDate, studentAcceptedDate, studentSemesterStart, studentIntendedMajor)
+    listOfStudents.append(student)
+
+    studentName = nameOfStudent("John", "B", "Doe")
+    studentID = studentID(9876543210)
+    studentAddress = Address("123", "Baker Street", "Downingtown", "DE", "19335", "Apartment")
+    studentEmail = email("tester@hotmail.com", "Work")
+    studentPhoneNumber = phoneNumber("610-789-1234", "Personal")
+    studentBirthDate = Date("01", "02", "2000")
+    studentAcceptedDate = Date("06", "12", "2024")
+    studentSemesterStart = Date("08", "30", "2024")
+    studentIntendedMajor = intendedMajor("Computer Science")
+
+    student = Student(studentName, studentID, studentAddress, studentEmail, studentPhoneNumber, studentBirthDate, studentAcceptedDate, studentSemesterStart, studentIntendedMajor)
+    listOfStudents.append(student)
+
+
     for i in listOfStudents:
-        print(i.ID)
-        firstName = input("First Name: ")
-        middleName = input("Middle Name: ")
-        lastName = input("Last Name: ")
-        studentName = nameOfStudent(firstName, middleName, lastName)
-        i.name = studentName
-        print(i)
+        print(f"{i.name}\n{i.ID}\n")
 
-    for i in listOfStudents:
-        if i.ID == studentID1:
-            pass
+    menu()
 
 
 class TestStudent():
