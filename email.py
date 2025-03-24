@@ -19,4 +19,4 @@ class email():
         return self.__typeOfEmail
 
     def __str__(self):
-        return f"{self.__email} {self.__typeOfEmail}"
+        return f"{self.__email}, {self.__typeOfEmail}"
