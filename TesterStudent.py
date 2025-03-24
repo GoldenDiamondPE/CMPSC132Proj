@@ -1,6 +1,7 @@
 # CMPSC132
 # Brandon and Gabe
-# 3/5/2025
+# 3/24/2025
+# This program uses 5 example students to demonstrate the functionality of the Academic Advisor Program
 
 from Student import Student
 

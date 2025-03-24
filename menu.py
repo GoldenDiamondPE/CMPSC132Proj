@@ -1,4 +1,7 @@
-# Brandon
+# CMPSC132
+# Brandon and Gabe
+# 3/5/2025
+#
 
 from Student import Student
 from nameOfStudent import nameOfStudent
@@ -9,7 +12,7 @@ from phoneNumber import phoneNumber
 from Date import Date
 from intendedMajor import intendedMajor
 
-def menu(listOfStudents = []):
+def menu(listOfStudents):
     running = True
     while running:
         userInput = input("What would you like to do?\n"
