@@ -1,3 +1,8 @@
+# CMPSC132
+# Brandon and Gabe
+# 3/24/2025
+# This gathers the preferred method of contact via email of the student.
+
 class email():
     def __init__(self, email, typeOfEmail):
         self.__email = email

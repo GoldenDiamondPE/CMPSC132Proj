@@ -1,3 +1,8 @@
+# CMPSC132
+# Brandon and Gabe
+# 3/24/2025
+# This program gathers the type and number the student prefers to be contacted from.
+
 class phoneNumber():
     def __init__(self, number, type):
         self.__number = number

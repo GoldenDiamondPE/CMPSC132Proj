@@ -1,3 +1,8 @@
+# CMPSC132
+# Brandon and Gabe
+# 3/24/2025
+# This program has the class Address to gather the information to fill out where the student lives
+
 class Address():
     def __init__(self, streetNumber, street,  city, state,  zipCode, typeOfHouse):
         self.__streetNumber = streetNumber

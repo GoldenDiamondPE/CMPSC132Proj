@@ -1,3 +1,8 @@
+# CMPSC132
+# Brandon and Gabe
+# 3/24/2025
+# The program Name of Student gathers the full name of the student.
+
 class nameOfStudent():
     def __init__(self, firstName, middleName, lastName):
         self.__firstName = firstName

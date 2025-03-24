@@ -1,3 +1,9 @@
+# CMPSC132
+# Brandon and Gabe
+# 3/24/2025
+# This has the class Student to gather all the information regarding the student
+# from name, ID, address, email, phone number, birthdate, acceptance date, start of semester, and intended Major
+
 class Student():
     def __init__(self, name, ID, address, email, phone, birthdate, acceptanceDate, semesterStart, intededMajor):
         self.name = name

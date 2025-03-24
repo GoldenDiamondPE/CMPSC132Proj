@@ -1,3 +1,8 @@
+# CMPSC132
+# Brandon and Gabe
+# 3/24/2025
+# This program has the class Date to gather information regarding dates from birthdays to acceptance date.
+
 class Date():
     def __init__(self, mm, dd, yyyy):
         self.__mm = mm

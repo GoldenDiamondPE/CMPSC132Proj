@@ -1,3 +1,8 @@
+# CMPSC132
+# Brandon and Gabe
+# 3/24/2025
+# This contains the ID of the student which is unique for each student
+
 class studentIDNum:
     def __init__(self, studentID):
         self.__studentID = studentID
