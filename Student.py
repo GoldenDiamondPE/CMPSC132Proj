@@ -1,5 +1,5 @@
 # CMPSC132
-# Brandon and Gabe
+# Gabriel Zavala Alonso and Brandon Bula
 # 3/24/2025
 # This has the class Student to gather all the information regarding the student
 # from name, ID, address, email, phone number, birthdate, acceptance date, start of semester, and intended Major
@@ -16,6 +16,7 @@ class Student():
         self.semesterStart = semesterStart
         self.intendedMajor = intededMajor
 
+    # Setters
     def setName(self, name):
         self.name = name
     def setID(self, ID):
@@ -35,6 +36,7 @@ class Student():
     def setIntededMajor(self, intededMajor):
         self.intendedMajor = intededMajor
 
+    # Getters
     def getName(self):
         return self.name
     def getID(self):

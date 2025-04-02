@@ -1,5 +1,5 @@
 # CMPSC132
-# Brandon and Gabe
+# Gabriel Zavala Alonso and Brandon Bula
 # 3/24/2025
 # The program Name of Student gathers the full name of the student.
 
@@ -9,6 +9,7 @@ class nameOfStudent():
         self.__middleName = middleName
         self.__lastName = lastName
 
+    # Setters
     def setFirstName(self, firstName):
         self.__firstName = firstName
     def setMiddleName(self, middleName):
@@ -16,6 +17,7 @@ class nameOfStudent():
     def setLastName(self, lastName):
         self.__lastName = lastName
 
+    # Getters
     def getFirstName(self):
         return self.__firstName
     def getMiddleName(self):

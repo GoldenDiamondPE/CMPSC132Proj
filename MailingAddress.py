@@ -1,5 +1,5 @@
 # CMPSC132
-# Brandon and Gabe
+# Gabriel Zavala Alonso and Brandon Bula
 # 3/24/2025
 # This program has the class Address to gather the information to fill out where the student lives
 
@@ -12,6 +12,7 @@ class Address():
         self.__zipCode = zipCode
         self.__typeOfHouse = typeOfHouse
 
+    # Setters
     def setstreetNumber(self, streetNumber):
         self.__streetNumber = streetNumber
     def setStreet(self, street):
@@ -25,6 +26,7 @@ class Address():
     def setTypeOfHouse(self, typeOfHouse):
         self.__typeOfHouse = typeOfHouse
 
+    # Getters
     def getstreetNumber(self):
         return self.__streetNumber
     def getStreet(self):

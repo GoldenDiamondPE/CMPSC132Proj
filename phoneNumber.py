@@ -1,5 +1,5 @@
 # CMPSC132
-# Brandon and Gabe
+# Gabriel Zavala Alonso and Brandon Bula
 # 3/24/2025
 # This program gathers the type and number the student prefers to be contacted from.
 
@@ -8,11 +8,12 @@ class phoneNumber():
         self.__number = number
         self.__type = type
 
+    # Setters
     def setNumber(self, number):
         self.__number = number
     def setType(self, type):
         self.__type = type
-
+    # Getters
     def getNumber(self):
         return self.__number
     def getType(self):

@@ -1,5 +1,5 @@
 # CMPSC132
-# Brandon and Gabe
+# Gabriel Zavala Alonso and Brandon Bula
 # 3/24/2025
 # This gathers the preferred method of contact via email of the student.
 
@@ -8,11 +8,13 @@ class email():
         self.__email = email
         self.__typeOfEmail = typeOfEmail
 
+    # Setters
     def setEmail(self, email):
         self.__email = email
     def settypeOfEmail(self, typeOfEmail):
         self.__typeOfEmail = typeOfEmail
 
+    # Getters
     def getEmail(self):
         return self.__email
     def gettypeOfEmail(self):

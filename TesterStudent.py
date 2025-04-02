@@ -1,11 +1,10 @@
 # CMPSC132
-# Brandon and Gabe
+# Gabriel Zavala Alonso and Brandon Bula
 # CMPSC 132
 # 3/24/2025
 # This program uses 5 example students to demonstrate the functionality of the Academic Advisor Program
 
 from Student import Student
-
 from nameOfStudent import nameOfStudent
 from studentIDNum import studentIDNum
 from MailingAddress import Address
@@ -17,6 +16,7 @@ from menu import menu
 
 listOfStudents = []
 
+# Fills out example of student info
 studentName = nameOfStudent("Brandon", "Alexander", "Bula")
 studentID = studentIDNum("1234567890")
 studentAddress = Address("91", "Rabbit Run Road",  "Parkesburg", "PA",  "19365", "Home")
@@ -86,6 +86,7 @@ listOfStudents.append(student)
 if __name__ == "__main__":
     menu(listOfStudents)
 
+# Test code through each meu option
 """
 What would you like to do?
 1. Create a Student
