@@ -13,6 +13,7 @@ class phoneNumber():
         self.__number = number
     def setType(self, type):
         self.__type = type
+
     # Getters
     def getNumber(self):
         return self.__number
