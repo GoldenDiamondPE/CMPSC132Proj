@@ -1,7 +1,7 @@
 # CMPSC132
 # Gabriel Zavala Alonso and Brandon Bula
 # 3/24/2025
-# This program has the class Date to gather information regarding dates from birthdays to acceptance date.
+# This program has the class Date to gather information regarding dates from birthdays, acceptance date, etc.
 
 class Date():
     def __init__(self, mm, dd, yyyy):
