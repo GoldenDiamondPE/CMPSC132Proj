@@ -1,7 +1,7 @@
 # CMPSC132
 # Gabriel Zavala Alonso and Brandon Bula
 # 3/5/2025
-# This program prompts the user with options on what to do with a student's info. This includes create a Student, Edit a Student, and Delete a Student Display a Student.
+# This program prompts the user with options on what to do with a student's info. This includes creating a Student, editing a student, deleting a student, and displaying a Student.
 
 from Student import Student
 from nameOfStudent import nameOfStudent
@@ -14,6 +14,7 @@ from intendedMajor import intendedMajor
 
 def menu(listOfStudents):
     running = True
+    print("Welocome to out Academic Advisor Managment program to be \nable to quickly edit students information!")
     while running:
         # Gathers input to decide what option to preform on the student
         userInput = input("What would you like to do?\n"
