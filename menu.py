@@ -14,9 +14,9 @@ from intendedMajor import intendedMajor
 
 def menu(listOfStudents):
     running = True
-    print("Welocome to out Academic Advisor Managment program to be \nable to quickly edit students information!")
+    print("Welcome to out Academic Advisor Managment program to be \nable to quickly edit students information!")
     while running:
-        # Gathers input to decide what option to preform on the student
+        # Gathers input to decide what option to perform on the student
         userInput = input("What would you like to do?\n"
                           "1. Create a Student\n"
                           "2. Edit a Student\n"
@@ -24,7 +24,7 @@ def menu(listOfStudents):
                           "4. Display a Student\n"
                           "5. Quit\n")
 
-        # Creates a student and add it to list
+        # Creates a student and adds it to the list
         if userInput == "1":
             # Name
             firstName = input("First Name: ")
