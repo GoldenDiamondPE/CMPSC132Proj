@@ -20,5 +20,6 @@ class email():
     def gettypeOfEmail(self):
         return self.__typeOfEmail
 
+    # Str function
     def __str__(self):
         return f"{self.__email}, {self.__typeOfEmail}"

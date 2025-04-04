@@ -1,7 +1,7 @@
 # CMPSC132
 # Gabriel Zavala Alonso and Brandon Bula
 # 3/5/2025
-# This program prompts the user with options on what to do with a students info
+# This program prompts the user with options on what to do with a student's info. This includes create a Student, Edit a Student, and Delete a Student Display a Student.
 
 from Student import Student
 from nameOfStudent import nameOfStudent

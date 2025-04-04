@@ -40,5 +40,6 @@ class Address():
     def getTypeOfHouse(self):
         return self.__typeOfHouse
 
+    # Str function
     def __str__(self):
         return f"{self.__streetNumber} {self.__street}, {self.__city}, {self.__state}, {self.__zipCode}. {self.__typeOfHouse}"

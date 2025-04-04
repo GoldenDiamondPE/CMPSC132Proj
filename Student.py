@@ -56,6 +56,7 @@ class Student():
     def getIntededMajor(self):
         return self.intendedMajor
 
+    # Str function
     def __str__(self):
         return (f"Student Name: {self.name}\n"
                 f"Student ID: {self.ID}\n"

@@ -20,5 +20,6 @@ class phoneNumber():
     def getType(self):
         return self.__type
 
+    # Str function
     def __str__(self):
         return f"{self.__number} {self.__type}"

@@ -27,6 +27,7 @@ studentAcceptedDate = Date("06", "12", "2024")
 studentSemesterStart = Date("08", "30", "2024")
 studentIntendedMajor = intendedMajor("Computer Science")
 
+# Appends student info
 student = Student(studentName, studentID, studentAddress, studentEmail, studentPhoneNumber, studentBirthDate, studentAcceptedDate, studentSemesterStart, studentIntendedMajor)
 listOfStudents.append(student)
 

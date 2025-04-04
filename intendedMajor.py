@@ -15,5 +15,6 @@ class intendedMajor():
     def getIntendedMajor(self):
         return self.__intendedMajor
 
+    # Str function
     def __str__(self):
         return self.__intendedMajor
