@@ -89,6 +89,8 @@ if __name__ == "__main__":
 
 # Test code through each meu option
 """
+Welocome to out Academic Advisor Managment program to be 
+able to quickly edit students information!
 What would you like to do?
 1. Create a Student
 2. Edit a Student
