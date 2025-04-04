@@ -14,7 +14,7 @@ from intendedMajor import intendedMajor
 
 def menu(listOfStudents):
     running = True
-    print("Welcome to out Academic Advisor Managment program to be \nable to quickly edit students information!")
+    print("Welcome to our Academic Advisor Management program to be \nable to quickly edit students information!")
     while running:
         # Gathers input to decide what option to perform on the student
         userInput = input("What would you like to do?\n"
