@@ -155,9 +155,14 @@ def menu(listOfStudents):
 
                             # Email
                             elif userInputToChange == "4":
-                                emailAddress = input("Email: ")
-                                emailType = input("Email Type: ")
-                                edited.email = email(emailAddress, emailType)
+                                emailInput = input("What would you like to do with the email?\n"
+                                                   "1. Add email\n"
+                                                   "2. Change email\n"
+                                                   "3. Remove email\n")
+                                if emailInput == "1":
+                                    emailAddress = input("Email: ")
+                                    emailType = input("Email Type: ")
+                                    edited.email = email(emailAddress, emailType)
 
                             # Phone Number
                             elif userInputToChange == "5":
