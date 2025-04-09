@@ -57,7 +57,7 @@ def menu(listOfStudents):
             # Email
             emailAddress = input("\nEmail: ")
             emailType = input("Email Type: ")
-            studentEmail = email(emailAddress, emailType)
+            studentEmails = [email(emailAddress, emailType)]
 
             # Phone Number
             number = input("\nPhone Number: ")
@@ -87,7 +87,7 @@ def menu(listOfStudents):
             StudentIntendedMajor = intendedMajor(intendedMajorPicked)
 
             # Combines all info
-            studentInfo = Student(studentName, studentIDNumber, studentAddress, studentEmail, studentPhoneNumber, birthday, acceptanceDate, semesterStart, StudentIntendedMajor)
+            studentInfo = Student(studentName, studentIDNumber, studentAddress, studentEmails, studentPhoneNumber, birthday, acceptanceDate, semesterStart, StudentIntendedMajor)
 
             listOfStudents.append(studentInfo)
 
@@ -119,7 +119,7 @@ def menu(listOfStudents):
                                                       "7. Acceptance Date\n"
                                                       "8. Semester Start\n"
                                                       "9. Intended Major\n"
-                                                      f"10. Quit Editing {studentIDNumber}\n")
+                                                      f"10. Quit Editing {edited.getID()}\n")
 
                             # Name
                             if userInputToChange == "1":
@@ -163,6 +163,7 @@ def menu(listOfStudents):
                                     emailAddress = input("Email: ")
                                     emailType = input("Email Type: ")
                                     edited.email = email(emailAddress, emailType)
+                                    edited.email.append(email(emailAddress, emailType))
 
                             # Phone Number
                             elif userInputToChange == "5":
