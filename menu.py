@@ -27,7 +27,7 @@ def menu(listOfStudents):
         # Creates a student and adds it to the list
         if userInput == "1":
             # Name
-            firstName = input("First Name: ")
+            firstName = input("\nFirst Name: ")
             middleName = input("Middle Name: ")
             lastName = input("Last Name: ")
             studentName = nameOfStudent(firstName, middleName, lastName)
@@ -91,99 +91,105 @@ def menu(listOfStudents):
 
             listOfStudents.append(studentInfo)
 
-            print(f"You Finished Creating {studentName}")
+            print(f"You Finished Creating {studentName}, {studentIDNumber}!")
 
         # Edit a Student
         if userInput == "2":
-            # Determine what student to edit
-            print("Here is a list of students name and ID:")
-            for i in listOfStudents:
-                print(f"{i.name}\n{i.ID}\n")
-            studentIDSelected = input("Student ID You Would Like to Edit: ")
+            if len(listOfStudents) == 0:
+                print("\nYou have not created any students to edit.\n")
+            else:
+                editing = True
+                while editing:
+                    # Determine what student to edit
+                    print("\nHere is a list of students name and ID:")
+                    for i in listOfStudents:
+                        print(f"{i.name}\n{i.ID}\n")
+                    studentIDSelected = input("Student ID You Would Like to Edit: ")
 
-            # Menu to see what gets edited
-            for edited in listOfStudents:
-                if edited.ID.getStudentID() == studentIDSelected:
-                    userInputToChange = input("What would you like to change?\n"
-                                              "1. Name\n"
-                                              "2. ID\n"
-                                              "3. Address\n"
-                                              "4. Email\n"
-                                              "5. Phone Number\n"
-                                              "6. Birthdate\n"
-                                              "7. Acceptance Date\n"
-                                              "8. Semester Start\n"
-                                              "9. Intended Major\n")
+                    # Menu to see what gets edited
+                    for edited in listOfStudents:
+                        if edited.ID.getStudentID() == studentIDSelected:
+                            userInputToChange = input("\nWhat would you like to change?\n"
+                                                      "1. Name\n"
+                                                      "2. ID\n"
+                                                      "3. Address\n"
+                                                      "4. Email\n"
+                                                      "5. Phone Number\n"
+                                                      "6. Birthdate\n"
+                                                      "7. Acceptance Date\n"
+                                                      "8. Semester Start\n"
+                                                      "9. Intended Major\n"
+                                                      f"10. Quit Editing {studentIDNumber}\n")
 
-                    # Name
-                    if userInputToChange == "1":
-                        firstName = input("First Name: ")
-                        middleName = input("Middle Name: ")
-                        lastName = input("Last Name: ")
-                        edited.name = nameOfStudent(firstName, middleName, lastName)
+                            # Name
+                            if userInputToChange == "1":
+                                firstName = input("First Name: ")
+                                middleName = input("Middle Name: ")
+                                lastName = input("Last Name: ")
+                                edited.name = nameOfStudent(firstName, middleName, lastName)
 
-                    # Student ID
-                    elif userInputToChange == "2":
-                        while True:
-                            try:
-                                studentID = input("Student ID: ")
-                                for possibleStudent in listOfStudents:
-                                    if possibleStudent.ID.getStudentID() == studentID:
-                                        print("This Student ID is already taken.")
-                                        raise ValueError()
-                                else:
-                                    edited.ID=studentIDNum(studentID)
-                                break
-                            except ValueError:
-                                print("Invalid input. Please enter a valid ID.")
+                            # Student ID
+                            elif userInputToChange == "2":
+                                while True:
+                                    try:
+                                        studentID = input("Student ID: ")
+                                        for possibleStudent in listOfStudents:
+                                            if possibleStudent.ID.getStudentID() == studentID:
+                                                print("This Student ID is already taken.")
+                                                raise ValueError()
+                                        else:
+                                            edited.ID=studentIDNum(studentID)
+                                        break
+                                    except ValueError:
+                                        print("Invalid input. Please enter a valid ID.")
 
-                    # Street Number
-                    elif userInputToChange == "3":
-                        streetNumber = input("Street Number: ")
-                        street = input("Street: ")
-                        city = input("City: ")
-                        state = input("State: ")
-                        zipCode = input("Zip Code: ")
-                        typeOfHouse = input("Type of House: ")
-                        edited.address = Address(streetNumber, city, state, zipCode, typeOfHouse)
+                            # Street Number
+                            elif userInputToChange == "3":
+                                streetNumber = input("Street Number: ")
+                                street = input("Street: ")
+                                city = input("City: ")
+                                state = input("State: ")
+                                zipCode = input("Zip Code: ")
+                                typeOfHouse = input("Type of House: ")
+                                edited.address = Address(streetNumber, city, state, zipCode, typeOfHouse)
 
-                    # Email
-                    elif userInputToChange == "4":
-                        emailAddress = input("Email: ")
-                        emailType = input("Email Type: ")
-                        edited.email = email(emailAddress, emailType)
+                            # Email
+                            elif userInputToChange == "4":
+                                emailAddress = input("Email: ")
+                                emailType = input("Email Type: ")
+                                edited.email = email(emailAddress, emailType)
 
-                    # Phone Number
-                    elif userInputToChange == "5":
-                        number = input("Phone Number: ")
-                        numberType = input("Phone Type: ")
-                        edited.phone = phoneNumber(number, numberType)
+                            # Phone Number
+                            elif userInputToChange == "5":
+                                number = input("Phone Number: ")
+                                numberType = input("Phone Type: ")
+                                edited.phone = phoneNumber(number, numberType)
 
-                    # Birth Date
-                    elif userInputToChange == "6":
-                        month = input("Month: ")
-                        day = input("Day: ")
-                        year = input("Year: ")
-                        edited.birthdate = Date(month, day, year)
+                            # Birth Date
+                            elif userInputToChange == "6":
+                                month = input("Month: ")
+                                day = input("Day: ")
+                                year = input("Year: ")
+                                edited.birthdate = Date(month, day, year)
 
-                    # Acceptance Date
-                    elif userInputToChange == "7":
-                        month = input("Month: ")
-                        day = input("Day: ")
-                        year = input("Year: ")
-                        edited.acceptanceDate = Date(month, day, year)
+                            # Acceptance Date
+                            elif userInputToChange == "7":
+                                month = input("Month: ")
+                                day = input("Day: ")
+                                year = input("Year: ")
+                                edited.acceptanceDate = Date(month, day, year)
 
-                    # Semester Start
-                    elif userInputToChange == "8":
-                        month = input("Month: ")
-                        day = input("Day: ")
-                        year = input("Year: ")
-                        edited.semesterStart = Date(month, day, year)
+                            # Semester Start
+                            elif userInputToChange == "8":
+                                month = input("Month: ")
+                                day = input("Day: ")
+                                year = input("Year: ")
+                                edited.semesterStart = Date(month, day, year)
 
-                    # Intended Major Picked
-                    elif userInputToChange == "9":
-                        intendedMajorPicked = input("Intended Major: ")
-                        edited.intendedMajor = intendedMajor(intendedMajorPicked)
+                            # Intended Major Picked
+                            elif userInputToChange == "9":
+                                intendedMajorPicked = input("Intended Major: ")
+                                edited.intendedMajor = intendedMajor(intendedMajorPicked)
 
 
         # Delete a Student
@@ -194,8 +200,11 @@ def menu(listOfStudents):
 
             for student in listOfStudents:
                 if student.ID.getStudentID() == studentToDelete:
-                    print(f"Student {student.name} (ID: {student.ID}) has been deleted.")
-                    listOfStudents.remove(student)
+                    print(student)
+                    confirmDelete = input(f"Delete {student.name} {student.ID.getStudentID()}? (Y/N): ")
+                    if confirmDelete == "Y":
+                        listOfStudents.remove(student)
+                        print(f"Student {student.name} (ID: {student.ID}) has been deleted.")
                     break
 
         # View a Student
