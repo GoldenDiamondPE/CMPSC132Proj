@@ -4,11 +4,9 @@
 # 3/24/2025
 # This program uses 5 example students to demonstrate the functionality of the Academic Advisor Program
 
-# When finish option, loop till asked to quit.
 # Email and Phone should be a list.
     # Add, edit, remove email + Phone
-# Say {student} has been created!
-# Display info then Confirm delete
+
 
 from Student import Student
 from nameOfStudent import nameOfStudent
