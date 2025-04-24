@@ -161,21 +161,27 @@ def menu(listOfStudents):
 
                         # Email
                         elif userInputToChange == "4":
-                            emailInput = input("What would you like to do with the email?\n"
-                                               "1. Add email\n"
-                                               "2. Change email\n"
-                                               "3. Remove email\n")
-                            if emailInput == "1":
-                                emailAddress = input("Email: ")
-                                emailType = input("Email Type: ")
-                                edited.email.append(email(emailAddress, emailType))
-                            elif emailInput == "2":
-                                for i in edited.email:
-                                    print(i)
-                            elif emailInput == "3":
-                                if not edited.email:
-                                    print("No email to remove.")
-                                    continue
+                            while True:
+                                emailInput = input("What would you like to do with the email?\n"
+                                                   "1. Add email\n"
+                                                   "2. Change email\n"
+                                                   "3. Remove email\n"
+                                                   "4. Exit\n")
+                                if emailInput == "1":
+                                    emailAddress = input("Email: ")
+                                    emailType = input("Email Type: ")
+                                    studentEmails = [email(emailAddress, emailType)]
+                                elif emailInput == "2":
+                                    for i in edited.email:
+                                        print(i)
+                                elif emailInput == "3":
+                                    if not edited.email:
+                                        print("No email to remove.")
+                                        continue
+                                    else:
+                                        pass
+                                elif emailInput == "4":
+                                    break
 
 
                         # Phone Number
