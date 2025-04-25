@@ -17,6 +17,7 @@ from phoneNumber import phoneNumber
 from Date import Date
 from intendedMajor import intendedMajor
 from menu import menu
+from AdvisorMenu import AdvisorMenu
 
 listOfStudents = []
 
@@ -89,4 +90,14 @@ listOfStudents.append(student)
 
 
 if __name__ == "__main__":
-    menu(listOfStudents)
+    while True:
+        user = int(input("\nAre modifying a\n"
+                         "1. Student\n"
+                         "2. Advisor\n"
+                         "3. Quit\n"))
+        if user == 1:
+            menu(listOfStudents)
+        elif user == 2:
+            AdvisorMenu(listOfStudents)
+        elif user == 3:
+            break

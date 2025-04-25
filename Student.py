@@ -4,6 +4,8 @@
 # This has the class Student to gather all the information regarding the student
 # from name, ID, address, email, phone number, birthdate, acceptance date, start of semester, and intended Major
 
+from CourseLinkedList import CourseLinkedList
+
 class Student():
     def __init__(self, name, ID, address, email, phone, birthdate, acceptanceDate, semesterStart, intededMajor):
         self.name = name
@@ -15,6 +17,8 @@ class Student():
         self.acceptanceDate = acceptanceDate
         self.semesterStart = semesterStart
         self.intendedMajor = intededMajor
+
+        self.__courseList = CourseLinkedList()
 
     # Setters
     def setName(self, name):
@@ -55,6 +59,16 @@ class Student():
         return self.semesterStart
     def getIntededMajor(self):
         return self.intendedMajor
+
+    def getCourseList(self):
+        return self.__courseList
+
+    def addCourse(self, course):
+        self.__courseList.addCourse(course)
+    def removeCourse(self, courseNumber):
+        return self.__courseList.removeCourse(courseNumber)
+
+
 
     def studentInfo(self):
         print(f"Student Name: {self.name}\n"
