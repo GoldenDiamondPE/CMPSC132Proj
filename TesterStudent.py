@@ -38,8 +38,8 @@ listOfStudents.append(student)
 studentName = nameOfStudent("John", "B", "Doe")
 studentID = studentIDNum("7203650189")
 studentAddress = Address("123", "Baker Street", "Downingtown", "DE", "19335", "Apartment")
-studentEmail = email("tester@hotmail.com", "Work")
-studentPhoneNumber = phoneNumber("610-789-1234", "Personal")
+studentEmail = [email("tester@hotmail.com", "Work")]
+studentPhoneNumber = [phoneNumber("610-789-1234", "Personal")]
 studentBirthDate = Date("01", "02", "2000")
 studentAcceptedDate = Date("06", "12", "2024")
 studentSemesterStart = Date("08", "30", "2024")
@@ -64,8 +64,8 @@ listOfStudents.append(student)
 studentName = nameOfStudent("Charles", "Q", "Pop")
 studentID = studentIDNum("6329103729")
 studentAddress = Address("524", "Runner Street", "Broke", "DE", "19335", "Apartment")
-studentEmail = email("bingbong@gmail.com", "Work")
-studentPhoneNumber = phoneNumber("867-193-7489", "Personal")
+studentEmail = [email("bingbong@gmail.com", "Work")]
+studentPhoneNumber = [phoneNumber("867-193-7489", "Personal")]
 studentBirthDate = Date("01", "02", "2000")
 studentAcceptedDate = Date("06", "12", "2024")
 studentSemesterStart = Date("08", "30", "2024")
@@ -77,8 +77,8 @@ listOfStudents.append(student)
 studentName = nameOfStudent("Dom", "B", "Sinclear")
 studentID = studentIDNum("2470836766")
 studentAddress = Address("757", "Rabbit Run Road", "Getty", "DE", "83024", "Apartment")
-studentEmail = email("tester@hotmail.com", "Work")
-studentPhoneNumber = phoneNumber("610-789-1234", "Personal")
+studentEmail = [email("tester@hotmail.com", "Work"), email("woker@gmail.com","Personal")]
+studentPhoneNumber = [phoneNumber("610-789-1234", "Personal")]
 studentBirthDate = Date("01", "02", "2000")
 studentAcceptedDate = Date("06", "12", "2024")
 studentSemesterStart = Date("08", "30", "2024")

@@ -56,14 +56,17 @@ class Student():
     def getIntededMajor(self):
         return self.intendedMajor
 
-    # Str function
-    def __str__(self):
-        return (f"Student Name: {self.name}\n"
+    def studentInfo(self):
+        print(f"Student Name: {self.name}\n"
                 f"Student ID: {self.ID}\n"
                 f"Student Address: {self.address}\n"
-                f"Student Email: {self.email}\n"
-                f"Student Phone: {self.phone}\n"
-                f"Student Birthdate: {self.birthdate}\n"
-                f"Student Acceptance Date: {self.acceptanceDate}\n"
-                f"Student Semester Start Date: {self.semesterStart}\n"
-                f"Student Intended Major: {self.intendedMajor}\n")
+              ,end="")
+        for i in self.email:
+            print(f"Student Email: {i}\n", end="")
+        for i in self.phone:
+            print(f"Student Phone: {i}\n",end="")
+        print(
+            f"Student Birthdate: {self.birthdate}\n"
+            f"Student Acceptance Date: {self.acceptanceDate}\n"
+            f"Student Semester Start Date: {self.semesterStart}\n"
+            f"Student Intended Major: {self.intendedMajor}\n")
