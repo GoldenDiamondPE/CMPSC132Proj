@@ -1,6 +1,6 @@
 from Advisor import Advisor
 
-def AdvisorMenu(studentList):
+def AdvisorMenu(advisorList, studentList):
     advisor = None
 
     while True:

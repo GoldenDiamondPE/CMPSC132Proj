@@ -5,9 +5,10 @@
 # from name, ID, address, email, phone number, birthdate, acceptance date, start of semester, and intended Major
 
 from CourseLinkedList import CourseLinkedList
+from Course import Course
 
 class Student():
-    def __init__(self, name, ID, address, email, phone, birthdate, acceptanceDate, semesterStart, intededMajor):
+    def __init__(self, name, ID, address, email, phone, birthdate, acceptanceDate, semesterStart, intededMajor, courseList=CourseLinkedList()):
         self.name = name
         self.ID = ID
         self.address = address
@@ -18,7 +19,7 @@ class Student():
         self.semesterStart = semesterStart
         self.intendedMajor = intededMajor
 
-        self.__courseList = CourseLinkedList()
+        self.courseList = courseList
 
     # Setters
     def setName(self, name):
@@ -61,12 +62,12 @@ class Student():
         return self.intendedMajor
 
     def getCourseList(self):
-        return self.__courseList
+        return self.courseList
 
     def addCourse(self, course):
-        self.__courseList.addCourse(course)
+        self.courseList.addCourse(course)
     def removeCourse(self, courseNumber):
-        return self.__courseList.removeCourse(courseNumber)
+        return self.courseList.removeCourse(courseNumber)
 
 
 
@@ -75,12 +76,23 @@ class Student():
                 f"Student ID: {self.ID}\n"
                 f"Student Address: {self.address}\n"
               ,end="")
-        for i in self.email:
-            print(f"Student Email: {i}\n", end="")
-        for i in self.phone:
-            print(f"Student Phone: {i}\n",end="")
+        print(f"Student Email: {self.email}\n", end="")
+        print(f"Student Phone: {self.email}\n",end="")
         print(
             f"Student Birthdate: {self.birthdate}\n"
             f"Student Acceptance Date: {self.acceptanceDate}\n"
             f"Student Semester Start Date: {self.semesterStart}\n"
-            f"Student Intended Major: {self.intendedMajor}\n")
+            f"Student Intended Major: {self.intendedMajor}\n"
+            f"Student Courses: {self.courseList}")
+
+    def __str__(self):
+        return (f"Student Name: {self.name}\n"
+                f"Student ID: {self.ID}\n"
+                f"Student Address: {self.address}\n"
+                f"Student Email: {self.email}\n"
+                f"Student Phone: {self.email}\n"
+                f"Student Birthdate: {self.birthdate}\n"
+                f"Student Acceptance Date: {self.acceptanceDate}\n"
+                f"Student Semester Start Date: {self.semesterStart}\n"
+                f"Student Intended Major: {self.intendedMajor}\n"
+                f"Student Courses: {self.courseList}")

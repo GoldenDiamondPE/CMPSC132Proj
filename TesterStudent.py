@@ -3,11 +3,7 @@
 # CMPSC 132
 # 3/24/2025
 # This program uses 5 example students to demonstrate the functionality of the Academic Advisor Program
-
-# Email and Phone should be a list.
-    # Add, edit, remove email + Phone
-
-
+from Advisor import Advisor
 from Student import Student
 from nameOfStudent import nameOfStudent
 from studentIDNum import studentIDNum
@@ -17,7 +13,10 @@ from phoneNumber import phoneNumber
 from Date import Date
 from intendedMajor import intendedMajor
 from menu import menu
+
 from AdvisorMenu import AdvisorMenu
+from Course import Course
+from CourseLinkedList import CourseLinkedList
 
 listOfStudents = []
 
@@ -33,8 +32,8 @@ studentSemesterStart = Date("08", "30", "2024")
 studentIntendedMajor = intendedMajor("Computer Science")
 
 # Appends student info
-student = Student(studentName, studentID, studentAddress, studentEmail, studentPhoneNumber, studentBirthDate, studentAcceptedDate, studentSemesterStart, studentIntendedMajor)
-listOfStudents.append(student)
+student1 = Student(studentName, studentID, studentAddress, studentEmail, studentPhoneNumber, studentBirthDate, studentAcceptedDate, studentSemesterStart, studentIntendedMajor)
+listOfStudents.append(student1)
 
 studentName = nameOfStudent("John", "B", "Doe")
 studentID = studentIDNum("7203650189")
@@ -46,8 +45,8 @@ studentAcceptedDate = Date("06", "12", "2024")
 studentSemesterStart = Date("08", "30", "2024")
 studentIntendedMajor = intendedMajor("Computer Science")
 
-student = Student(studentName, studentID, studentAddress, studentEmail, studentPhoneNumber, studentBirthDate, studentAcceptedDate, studentSemesterStart, studentIntendedMajor)
-listOfStudents.append(student)
+student2 = Student(studentName, studentID, studentAddress, studentEmail, studentPhoneNumber, studentBirthDate, studentAcceptedDate, studentSemesterStart, studentIntendedMajor)
+listOfStudents.append(student2)
 
 studentName = nameOfStudent("Mac", "C", "Conor")
 studentID = studentIDNum("8759350958")
@@ -58,9 +57,12 @@ studentBirthDate = Date("01", "02", "2000")
 studentAcceptedDate = Date("06", "12", "2024")
 studentSemesterStart = Date("08", "30", "2024")
 studentIntendedMajor = intendedMajor("Biology")
+Course1 = Course("CMPSC132", "2", "Online", "Completed", "A")
+studentCourses = []
+CourseLinkedList.addCourse(studentCourses, Course1)
 
-student = Student(studentName, studentID, studentAddress, studentEmail, studentPhoneNumber, studentBirthDate, studentAcceptedDate, studentSemesterStart, studentIntendedMajor)
-listOfStudents.append(student)
+student3 = Student(studentName, studentID, studentAddress, studentEmail, studentPhoneNumber, studentBirthDate, studentAcceptedDate, studentSemesterStart, studentIntendedMajor, studentCourses)
+listOfStudents.append(student3)
 
 studentName = nameOfStudent("Charles", "Q", "Pop")
 studentID = studentIDNum("6329103729")
@@ -72,8 +74,8 @@ studentAcceptedDate = Date("06", "12", "2024")
 studentSemesterStart = Date("08", "30", "2024")
 studentIntendedMajor = intendedMajor("Political Science")
 
-student = Student(studentName, studentID, studentAddress, studentEmail, studentPhoneNumber, studentBirthDate, studentAcceptedDate, studentSemesterStart, studentIntendedMajor)
-listOfStudents.append(student)
+student4 = Student(studentName, studentID, studentAddress, studentEmail, studentPhoneNumber, studentBirthDate, studentAcceptedDate, studentSemesterStart, studentIntendedMajor)
+listOfStudents.append(student4)
 
 studentName = nameOfStudent("Dom", "B", "Sinclear")
 studentID = studentIDNum("2470836766")
@@ -85,8 +87,14 @@ studentAcceptedDate = Date("06", "12", "2024")
 studentSemesterStart = Date("08", "30", "2024")
 studentIntendedMajor = intendedMajor("Computer Science")
 
-student = Student(studentName, studentID, studentAddress, studentEmail, studentPhoneNumber, studentBirthDate, studentAcceptedDate, studentSemesterStart, studentIntendedMajor)
-listOfStudents.append(student)
+student5 = Student(studentName, studentID, studentAddress, studentEmail, studentPhoneNumber, studentBirthDate, studentAcceptedDate, studentSemesterStart, studentIntendedMajor)
+listOfStudents.append(student5)
+
+
+# Advisors
+
+listOfAdvisors = []
+listOfAdvisors.append(Advisor("John", "Bigfoot", "A", "Professor", "English"))
 
 
 if __name__ == "__main__":
@@ -98,6 +106,6 @@ if __name__ == "__main__":
         if user == 1:
             menu(listOfStudents)
         elif user == 2:
-            AdvisorMenu(listOfStudents)
+            AdvisorMenu(listOfAdvisors,listOfStudents)
         elif user == 3:
             break

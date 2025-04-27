@@ -293,7 +293,7 @@ def menu(listOfStudents):
 
                 for student in listOfStudents:
                     if student.ID.getStudentID() == studentToDelete:
-                        print(student.studentInfo())
+                        print(student)
                         confirmDelete = input(f"Delete {student.name} {student.ID.getStudentID()}? (Y/N): ")
                         if confirmDelete == "Y":
                             listOfStudents.remove(student)
@@ -315,7 +315,7 @@ def menu(listOfStudents):
 
                 for student in listOfStudents:
                     if student.ID.getStudentID() == studentToView:
-                        print(student.studentInfo())
+                        print(student)
                         break
                 else:
                     print("Student not found!")

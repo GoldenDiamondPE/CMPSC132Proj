@@ -24,9 +24,11 @@ class AdviseeLinkedList:
         return False  # not found
 
     def __str__(self):
-        current = self.head
         result = ""
-        while current:
-            result += str(current.student) + "\n\n"
-            current = current.next
-        return result.strip()
+        traversalPointer = self.head
+        while traversalPointer:
+            result += traversalPointer.getData() + " --> "
+            traversalPointer = traversalPointer.next
+        result += "DONE"
+        return result
+

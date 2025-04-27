@@ -16,7 +16,7 @@ def createStudent(first, middle, last, idNum, majorName, courseData):
     name = nameOfStudent(first, middle, last)
     sid = studentIDNum(idNum)
     address = Address("123", "College Ave", "State College", "PA", "16801", "Home")
-    emails = [email(f"{first.lower()}@email.com", "Personal")]
+    emails = [email(f"{name.getFirstName()}@email.com", "Personal")]
     phones = [phoneNumber("814-123-4567", "Personal")]
     birth = Date("01", "01", "2000")
     accepted = Date("06", "01", "2024")
@@ -69,5 +69,5 @@ advisor.addAdvisee(student1)
 advisor.addAdvisee(student2)
 advisor.addAdvisee(student3)
 
-# Launch menu
-AdvisorMenu(allStudents + [student1, student2, student3])
+if __name__ == "__main__":
+    AdvisorMenu(allStudents)
