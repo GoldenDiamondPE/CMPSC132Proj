@@ -8,7 +8,7 @@ from CourseLinkedList import CourseLinkedList
 from Course import Course
 
 class Student():
-    def __init__(self, name, ID, address, email, phone, birthdate, acceptanceDate, semesterStart, intededMajor, courseList=CourseLinkedList()):
+    def __init__(self, name, ID, address, email, phone, birthdate, acceptanceDate, semesterStart, intededMajor, courseList=None):
         self.name = name
         self.ID = ID
         self.address = address
@@ -19,7 +19,10 @@ class Student():
         self.semesterStart = semesterStart
         self.intendedMajor = intededMajor
 
-        self.courseList = courseList
+        if courseList is None:
+            self.courseList = CourseLinkedList()
+        else:
+            self.courseList = courseList
 
     # Setters
     def setName(self, name):
@@ -77,7 +80,7 @@ class Student():
                 f"Student Address: {self.address}\n"
               ,end="")
         print(f"Student Email: {self.email}\n", end="")
-        print(f"Student Phone: {self.email}\n",end="")
+        print(f"Student Phone: {self.phone}\n",end="")
         print(
             f"Student Birthdate: {self.birthdate}\n"
             f"Student Acceptance Date: {self.acceptanceDate}\n"
@@ -90,7 +93,7 @@ class Student():
                 f"Student ID: {self.ID}\n"
                 f"Student Address: {self.address}\n"
                 f"Student Email: {self.email}\n"
-                f"Student Phone: {self.email}\n"
+                f"Student Phone: {self.phone}\n"
                 f"Student Birthdate: {self.birthdate}\n"
                 f"Student Acceptance Date: {self.acceptanceDate}\n"
                 f"Student Semester Start Date: {self.semesterStart}\n"
