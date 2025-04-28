@@ -1,4 +1,5 @@
 from AdviseesLinkedList import AdviseeLinkedList
+from Student import Student
 
 class Advisor:
     def __init__(self, firstName, lastName, middleName, title, department):
@@ -36,15 +37,14 @@ class Advisor:
         self.__department = department
 
     # Methods to edit advisee list
-    def addAdvisee(self, student):
-        self.__adviseeList.addAdvisee(student)
+    def addAdvisee(self, studentID):
+        self.__adviseeList.addAdvisee(studentID)
 
     def removeAdvisee(self, studentID):
         return self.__adviseeList.removeAdvisee(studentID)
 
     def __str__(self):
-        fullName = f"{self.__firstName} {self.__middleName} {self.__lastName}"
-        return (f"Advisor Name: {fullName}\n"
-            f"Title: {self.__title}\n"
-            f"Department: {self.__department}\n"
-            f"Advisees:\n{str(self.__adviseeList) if str(self.__adviseeList).strip() else 'No advisees yet.'}")
+        return (f"Advisor Name: {self.__firstName} {self.__middleName} {self.__lastName}\n"
+                f"Title: {self.__title}\n"
+                f"Department: {self.__department}\n"
+                f"Advisees: \n{self.__adviseeList}")

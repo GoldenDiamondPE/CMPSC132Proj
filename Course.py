@@ -30,9 +30,7 @@ class Course:
     def getGrade(self):
         return self.__grade
 
-    # Custom string representation
+    # Custom string
     def __str__(self):
-        return (
-            f"Course: {self.__courseNumber}, Semester: {self.__semesterTaken}, "
-            f"Delivery: {self.__deliveryMethod}, Status: {self.__status}, Grade: {self.__grade}"
-        )
+        return (f"{self.__courseNumber}, Semester: {self.__semesterTaken}, "
+                f"Delivery: {self.__deliveryMethod}, Status: {self.__status}, Grade: {self.__grade}")

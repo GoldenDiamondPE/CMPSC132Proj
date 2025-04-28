@@ -1,19 +1,19 @@
-from CourseNode import CourseNode
+from EmailInfoNode import EmailNode
 
-class CourseLinkedList:
+class EmailLinkedList:
     def __init__(self):
         self.head = None
 
-    def addCourse(self, course):
-        newNode = CourseNode(course)
+    def addEmail(self, info):
+        newNode = EmailNode(info)
         newNode.next = self.head
         self.head = newNode
 
-    def removeCourse(self, courseNumber):
+    def removeEmail(self, info):
         prev = None
         current = self.head
         while current:
-            if current.course.getCourseNumber() == courseNumber:
+            if current.email.getStudentEmail() == info:
                 if prev:
                     prev.next = current.next
                 else:
@@ -27,6 +27,6 @@ class CourseLinkedList:
         result = ""
         current = self.head
         while current:
-            result += str(current.getCourse()) + "\n"
+            result += str(current.getStudentEmail()) + "\n"
             current = current.next
         return result.strip()

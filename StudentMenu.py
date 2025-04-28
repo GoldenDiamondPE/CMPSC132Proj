@@ -11,6 +11,9 @@ from email import email
 from phoneNumber import phoneNumber
 from Date import Date
 from intendedMajor import intendedMajor
+from Course import Course
+from CourseLinkedList import CourseLinkedList
+
 
 def menu(listOfStudents):
     print("Welcome to our Academic Advisor Management program to be \nable to quickly edit students information!")
@@ -36,6 +39,9 @@ def menu(listOfStudents):
                 while True:
                     try:
                         studentID = input("\nStudent ID: ")
+                        while not studentID:
+                            print("Please enter a student ID.")
+                            studentID = input("Student ID: ")
                         for w in listOfStudents:
                             if w.ID == studentID:
                                 raise ValueError("This Student ID is already taken.")
@@ -126,7 +132,8 @@ def menu(listOfStudents):
                                                       "7. Acceptance Date\n"
                                                       "8. Semester Start\n"
                                                       "9. Intended Major\n"
-                                                      f"10. Quit Editing {edited.getID()}\n")
+                                                      "10. Courses\n"
+                                                      f"11. Quit Editing {edited.getID()}\n")
 
                             # Name
                             if userInputToChange == "1":
@@ -140,6 +147,9 @@ def menu(listOfStudents):
                                 while True:
                                     try:
                                         studentID = input("Student ID: ")
+                                        if not studentID:
+                                            print("Please enter a student ID.")
+                                            studentID = input("Student ID: ")
                                         for possibleStudent in listOfStudents:
                                             if possibleStudent.ID.getStudentID() == studentID:
                                                 print("This Student ID is already taken.")
@@ -202,7 +212,6 @@ def menu(listOfStudents):
                                     elif emailInput == "4":
                                         break
 
-
                             # Phone Number
                             elif userInputToChange == "5":
                                 while True:
@@ -214,7 +223,7 @@ def menu(listOfStudents):
                                     if numberInput == "1":
                                         number = input("Phone Number: ")
                                         numberType = input("Phone Type: ")
-                                        edited.phone = [phoneNumber(number, numberType)]
+                                        edited.phone = phoneNumber(number, numberType)
 
                                     elif numberInput == "2":
                                         if not edited.phone:
@@ -246,7 +255,6 @@ def menu(listOfStudents):
                                     elif numberInput == "4":
                                         break
 
-
                             # Birth Date
                             elif userInputToChange == "6":
                                 month = input("Month: ")
@@ -274,6 +282,17 @@ def menu(listOfStudents):
                                 edited.intendedMajor = intendedMajor(intendedMajorPicked)
 
                             elif userInputToChange == "10":
+                                courseNumber = input("Course Number: ")
+                                semesterTaken = input("Semester Taken: ")
+                                deliveryMethod = input("Delivery Method: ")
+                                status = input("Status: ")
+                                grade = input("Grade: ")
+                                Courses = Course(courseNumber, semesterTaken, deliveryMethod, status, grade)
+                                edited.addCourse(Courses)
+                                print(Courses)
+
+
+                            elif userInputToChange == "11":
                                 break
                         else:
                             print("Not a valid choice!")
@@ -316,10 +335,6 @@ def menu(listOfStudents):
                 for student in listOfStudents:
                     if student.ID.getStudentID() == studentToView:
                         print(student)
-                        break
-                else:
-                    print("Student not found!")
-
                 end = input("\nWould you like to view another student? (Y/N)\n")
                 if end == "Y":
                     continue
@@ -329,10 +344,8 @@ def menu(listOfStudents):
 
         # Quit Program
         elif userInput == "5":
-            print("You have selected to close the program!")
+            print("\nYou have selected to close the program!")
             break
-
-    print("Thank you for using this program.")
 
 if __name__ == "__main__":
     listOfStudents = []

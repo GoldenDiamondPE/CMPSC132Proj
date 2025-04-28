@@ -1,19 +1,19 @@
-from CourseNode import CourseNode
+from PhoneInfoNode import PhoneNode
 
-class CourseLinkedList:
+class PhoneLinkedList:
     def __init__(self):
         self.head = None
 
-    def addCourse(self, course):
-        newNode = CourseNode(course)
+    def addPhone(self, info):
+        newNode = PhoneNode(info)
         newNode.next = self.head
         self.head = newNode
 
-    def removeCourse(self, courseNumber):
+    def removePhone(self, info):
         prev = None
         current = self.head
         while current:
-            if current.course.getCourseNumber() == courseNumber:
+            if current.phone.getStudentPhone() == info:
                 if prev:
                     prev.next = current.next
                 else:
@@ -27,6 +27,6 @@ class CourseLinkedList:
         result = ""
         current = self.head
         while current:
-            result += str(current.getCourse()) + "\n"
+            result += str(current.getStudentPhone()) + "\n"
             current = current.next
         return result.strip()

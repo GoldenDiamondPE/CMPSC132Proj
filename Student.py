@@ -5,24 +5,22 @@
 # from name, ID, address, email, phone number, birthdate, acceptance date, start of semester, and intended Major
 
 from CourseLinkedList import CourseLinkedList
+from PhoneLinkedList import PhoneLinkedList
 from Course import Course
+from EmailLinkedList import EmailLinkedList
 
 class Student():
-    def __init__(self, name, ID, address, email, phone, birthdate, acceptanceDate, semesterStart, intededMajor, courseList=None):
+    def __init__(self, name, ID, address, birthdate, acceptanceDate, semesterStart, intededMajor):
         self.name = name
         self.ID = ID
         self.address = address
-        self.email = email
-        self.phone = phone
+        self.emailList = EmailLinkedList()
+        self.phoneList = PhoneLinkedList()
         self.birthdate = birthdate
         self.acceptanceDate = acceptanceDate
         self.semesterStart = semesterStart
         self.intendedMajor = intededMajor
-
-        if courseList is None:
-            self.courseList = CourseLinkedList()
-        else:
-            self.courseList = courseList
+        self.courseList = CourseLinkedList()
 
     # Setters
     def setName(self, name):
@@ -31,10 +29,6 @@ class Student():
         self.ID = ID
     def setAddress(self, address):
         self.address = address
-    def setEmail(self, email):
-        self.email = email
-    def setPhone(self, phone):
-        self.phone = phone
     def setBirthdate(self, birthdate):
         self.birthdate = birthdate
     def setAcceptanceDate(self, acceptanceDate):
@@ -51,10 +45,6 @@ class Student():
         return self.ID
     def getAddress(self):
         return self.address
-    def getEmail(self):
-        return self.email
-    def getPhone(self):
-        return self.phone
     def getBirthdate(self):
         return self.birthdate
     def getAcceptanceDate(self):
@@ -66,36 +56,33 @@ class Student():
 
     def getCourseList(self):
         return self.courseList
-
     def addCourse(self, course):
         self.courseList.addCourse(course)
     def removeCourse(self, courseNumber):
         return self.courseList.removeCourse(courseNumber)
 
+    def getPhoneList(self):
+        return self.phoneList
+    def addPhone(self, phone):
+        return self.phoneList.addPhone(phone)
+    def removePhone(self, phoneNumber):
+        return self.phoneList.removePhone(phoneNumber)
 
-
-    def studentInfo(self):
-        print(f"Student Name: {self.name}\n"
-                f"Student ID: {self.ID}\n"
-                f"Student Address: {self.address}\n"
-              ,end="")
-        print(f"Student Email: {self.email}\n", end="")
-        print(f"Student Phone: {self.phone}\n",end="")
-        print(
-            f"Student Birthdate: {self.birthdate}\n"
-            f"Student Acceptance Date: {self.acceptanceDate}\n"
-            f"Student Semester Start Date: {self.semesterStart}\n"
-            f"Student Intended Major: {self.intendedMajor}\n"
-            f"Student Courses: {self.courseList}")
+    def getEmailList(self):
+        return self.emailList
+    def addEmail(self, email):
+        return self.emailList.addEmail(email)
+    def removeEmail(self, emailNumber):
+        return self.emailList.removeEmail(emailNumber)
 
     def __str__(self):
         return (f"Student Name: {self.name}\n"
                 f"Student ID: {self.ID}\n"
                 f"Student Address: {self.address}\n"
-                f"Student Email: {self.email}\n"
-                f"Student Phone: {self.phone}\n"
+                f"Student Emails: \n{self.emailList}\n"
+                f"Student Phone Numbers: \n{self.phoneList}\n"
                 f"Student Birthdate: {self.birthdate}\n"
                 f"Student Acceptance Date: {self.acceptanceDate}\n"
                 f"Student Semester Start Date: {self.semesterStart}\n"
                 f"Student Intended Major: {self.intendedMajor}\n"
-                f"Student Courses: {self.courseList}")
+                f"Student Courses: \n{self.courseList}")
