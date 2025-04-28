@@ -1,3 +1,8 @@
+# CMPSC132
+# Gabriel Zavala Alonso and Brandon Bula
+# 4/24/2025
+# Gets all the information with the creation and modification of a linked list for courses
+
 from CourseNode import CourseNode
 
 class CourseLinkedList:
@@ -13,7 +18,7 @@ class CourseLinkedList:
         prev = None
         current = self.head
         while current:
-            if current.course.getCourseNumber() == courseNumber:
+            if current.getCourse().getCourseNumber() == courseNumber:
                 if prev:
                     prev.next = current.next
                 else:
@@ -23,10 +28,14 @@ class CourseLinkedList:
             current = current.next
         return False  # course not found
 
+
     def __str__(self):
         result = ""
         current = self.head
+        if not current:
+            return f"No courses enrolled."
         while current:
-            result += str(current.getCourse()) + "\n"
+            result += f"{current.getCourse()}\n"
             current = current.next
         return result.strip()
+

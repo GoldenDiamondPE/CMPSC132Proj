@@ -1,3 +1,8 @@
+# CMPSC132
+# Gabriel Zavala Alonso and Brandon Bula
+# 4/24/2025
+# Gets all the information regarding the phone numbers used and presents them in a linked list
+
 from PhoneInfoNode import PhoneNode
 
 class PhoneLinkedList:

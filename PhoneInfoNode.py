@@ -1,3 +1,8 @@
+# CMPSC132
+# Gabriel Zavala Alonso and Brandon Bula
+# 4/24/2025
+# The phone node for the linked list
+
 class PhoneNode:
     def __init__(self, phone):
         self.__phone = phone

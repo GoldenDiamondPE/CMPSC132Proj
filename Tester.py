@@ -151,4 +151,4 @@ if __name__ == "__main__":
             AdvisorMenu(listOfAdvisors,listOfStudents)
         elif user == 3:
             break
-    print("\nThank You For Using Our!")
+    print("\nThank You For Using Our Program!")

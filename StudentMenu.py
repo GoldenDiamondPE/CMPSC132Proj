@@ -282,14 +282,51 @@ def menu(listOfStudents):
                                 edited.intendedMajor = intendedMajor(intendedMajorPicked)
 
                             elif userInputToChange == "10":
-                                courseNumber = input("Course Number: ")
-                                semesterTaken = input("Semester Taken: ")
-                                deliveryMethod = input("Delivery Method: ")
-                                status = input("Status: ")
-                                grade = input("Grade: ")
-                                Courses = Course(courseNumber, semesterTaken, deliveryMethod, status, grade)
-                                edited.addCourse(Courses)
-                                print(Courses)
+                                while True:
+                                    subChoice = input("What About Course Would You Like to Change:\n"
+                                                      "1. Add Course\n"
+                                                      "2. Remove Course\n"
+                                                      "3. Exit\n")
+                                    if subChoice == "1":
+                                        courseNumber = input("Course Number: ")
+                                        semesterTaken = input("Semester Taken: ")
+                                        deliveryMethod = input("Delivery Method: ")
+                                        status = input("Status: ")
+                                        grade = input("Grade: ")
+                                        Courses = Course(courseNumber, semesterTaken, deliveryMethod, status, grade)
+                                        edited.addCourse(Courses)
+                                        print(Courses)
+
+                                    elif subChoice == "2":
+                                        print("\nStudent's Current Courses:")
+                                        edited.displayCourses()  # <== You'll need a method to list their courses numbered
+                                        try:
+                                            courseToRemove = (input("Enter the course name to remove: "))
+                                            if edited.removeCourse(courseToRemove):
+                                                print("Course removed successfully!")
+                                            else:
+                                                print("Invalid selection. No course removed.")
+                                        except ValueError:
+                                            print("Invalid input. Please enter a valid number.")
+
+
+                                    elif subChoice == "3":
+                                        break
+
+
+
+                                """
+                                    def setCourseNumber(self, courseNumber):
+        self.__courseNumber = courseNumber
+    def setSemesterTaken(self, semesterTaken):
+        self.__semesterTaken = semesterTaken
+    def setDeliveryMethod(self, deliveryMethod):
+        self.__deliveryMethod = deliveryMethod
+    def setStatus(self, status):
+        self.__status = status
+    def setGrade(self, grade):
+        self.__grade = grade
+                                """
 
 
                             elif userInputToChange == "11":

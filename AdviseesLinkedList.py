@@ -1,5 +1,9 @@
-from AdviseeNode import AdviseeNode
+# CMPSC132
+# Gabriel Zavala Alonso and Brandon Bula
+# 4/24/2025
+# Creates a linked list for Advisees
 
+from AdviseeNode import AdviseeNode
 
 class AdviseeLinkedList:
     def __init__(self):

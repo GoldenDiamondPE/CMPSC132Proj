@@ -1,3 +1,8 @@
+# CMPSC132
+# Gabriel Zavala Alonso and Brandon Bula
+# 4/24/2025
+# Email nodes for the linked list
+
 class EmailNode:
     def __init__(self, email):
         self.__email = email

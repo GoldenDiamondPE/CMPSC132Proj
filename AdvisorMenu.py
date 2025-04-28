@@ -1,5 +1,9 @@
-from Advisor import Advisor
+# CMPSC132
+# Gabriel Zavala Alonso and Brandon Bula
+# 4/24/2025
+# Allows for a user to go through and edit all the different aspects of the advisor
 
+from Advisor import Advisor
 
 def AdvisorMenu(advisorList, studentList):
     while True:

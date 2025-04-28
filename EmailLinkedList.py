@@ -1,3 +1,8 @@
+# CMPSC132
+# Gabriel Zavala Alonso and Brandon Bula
+# 4/24/2025
+# Creates a linked list for the emails of students
+
 from EmailInfoNode import EmailNode
 
 class EmailLinkedList:

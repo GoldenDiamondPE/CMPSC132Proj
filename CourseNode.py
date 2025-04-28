@@ -1,3 +1,8 @@
+# CMPSC132
+# Gabriel Zavala Alonso and Brandon Bula
+# 4/24/2025
+# Course Nodes for the linked list
+
 class CourseNode:
     def __init__(self, course):
         self.__course = course

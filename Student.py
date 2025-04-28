@@ -75,6 +75,17 @@ class Student():
     def removeEmail(self, emailNumber):
         return self.emailList.removeEmail(emailNumber)
 
+    def displayCourses(self):
+        current = self.courseList.head
+        count = 1
+        if current is None:
+            print("No courses enrolled yet.")
+        else:
+            while current:
+                print(f"{count}. {current.getCourse()}")  # <<== Use .getCourse() because __course is private
+                current = current.next
+                count += 1
+
     def __str__(self):
         return (f"Student Name: {self.name}\n"
                 f"Student ID: {self.ID}\n"

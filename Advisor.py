@@ -1,3 +1,8 @@
+# CMPSC132
+# Gabriel Zavala Alonso and Brandon Bula
+# 4/24/2025
+# Gets all the information regarding the Advisor and ties it with advisees
+
 from AdviseesLinkedList import AdviseeLinkedList
 from Student import Student
 

@@ -1,3 +1,8 @@
+# CMPSC132
+# Gabriel Zavala Alonso and Brandon Bula
+# 4/24/2025
+# Sets and gets info related to Advisees
+
 class AdviseeNode:
     def __init__(self, AdviseeNode):
         self.__AdviseeNode = AdviseeNode

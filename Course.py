@@ -1,3 +1,8 @@
+# CMPSC132
+# Gabriel Zavala Alonso and Brandon Bula
+# 4/24/2025
+# Organizes all the Course related information
+
 class Course:
     def __init__(self, courseNumber, semesterTaken, deliveryMethod, status, grade):
         self.__courseNumber = courseNumber
